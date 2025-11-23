@@ -199,9 +199,9 @@ export default {
           ? this.getJudgePrompt(this.situation)
           : this.getDefendPrompt(this.situation)
 
-        // Utilise l'URL de la fonction Netlify en production, localhost en dev
+        // Utilise l'URL de l'API en production, localhost en dev
         const apiUrl = import.meta.env.PROD 
-          ? '/.netlify/functions/analyze'
+          ? '/api/analyze'
           : 'http://localhost:3001/api/analyze'
         
         const response = await axios.post(apiUrl, { prompt })
