@@ -37,15 +37,18 @@ export const handler = async (event) => {
       }
     }
 
-    const apiKey = process.env.VITE_ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY
+    const apiKey = process.env.ANTHROPIC_API_KEY || process.env.VITE_ANTHROPIC_API_KEY
 
     if (!apiKey) {
+      console.error('API key not found. Available env vars:', Object.keys(process.env).filter(k => k.includes('API')))
       return {
         statusCode: 500,
         headers,
         body: JSON.stringify({ error: 'API key not configured' })
       }
     }
+
+    console.log('API key found:', apiKey.substring(0, 20) + '...')
 
     const anthropic = new Anthropic({
       apiKey: apiKey
