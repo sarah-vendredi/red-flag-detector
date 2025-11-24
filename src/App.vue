@@ -15,7 +15,7 @@
       <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-gray-200 p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8">
         <!-- Mode Toggle -->
         <div class="flex flex-col items-center mb-6">
-          <div class="text-xs text-gray-500 mb-2">Choisis ton mode :</div>
+          <div class="text-xs text-gray-500 mb-2">choisis ton mode :</div>
           <div class="flex gap-2 sm:gap-3">
             <button
               @click="mode = 'judge'"
