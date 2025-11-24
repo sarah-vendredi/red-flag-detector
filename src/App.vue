@@ -144,7 +144,7 @@
       <!-- Footer -->
       <footer class="text-center mt-8 sm:mt-12 pb-6 sm:pb-8">
         <div class="text-gray-400 text-xs mb-3 max-w-md mx-auto px-4">
-          🔒 Aucune donnée personnelle n'est collectée ou stockée. Tes situations sont analysées en temps réel et ne sont jamais sauvegardées.
+          🔒 Aucune donnée personnelle n'est collectée ou stockée. Les analyses sont effectuées en temps réel et ne sont jamais sauvegardées.
         </div>
         <div class="text-gray-500 text-sm">
           © 2025 Sarah Maury
