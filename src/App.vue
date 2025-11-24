@@ -14,16 +14,28 @@
       <!-- Main Card -->
       <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-gray-200 p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8">
         <!-- Mode Toggle -->
-        <div class="flex justify-center mb-6">
-          <button
-            @click="toggleMode"
-            class="px-4 sm:px-6 py-2 text-sm sm:text-base rounded-full font-semibold transition-all duration-300"
-            :class="mode === 'judge' 
-              ? 'bg-red-500 text-white hover:bg-red-600' 
-              : 'bg-green-500 text-white hover:bg-green-600'"
-          >
-            {{ mode === 'judge' ? '⚖️ mode juge' : '🛡️ mode avocat' }}
-          </button>
+        <div class="flex flex-col items-center mb-6">
+          <div class="text-xs text-gray-500 mb-2">Choisis ton mode :</div>
+          <div class="flex gap-2 sm:gap-3">
+            <button
+              @click="mode = 'judge'"
+              class="px-4 sm:px-6 py-2 text-sm sm:text-base rounded-full font-semibold transition-all duration-300"
+              :class="mode === 'judge' 
+                ? 'bg-red-500 text-white shadow-lg scale-105' 
+                : 'bg-gray-200 text-gray-600 hover:bg-gray-300'"
+            >
+              ⚖️ mode juge
+            </button>
+            <button
+              @click="mode = 'defend'"
+              class="px-4 sm:px-6 py-2 text-sm sm:text-base rounded-full font-semibold transition-all duration-300"
+              :class="mode === 'defend' 
+                ? 'bg-green-500 text-white shadow-lg scale-105' 
+                : 'bg-gray-200 text-gray-600 hover:bg-gray-300'"
+            >
+              🛡️ mode avocat
+            </button>
+          </div>
         </div>
 
         <!-- Mode Callout -->
